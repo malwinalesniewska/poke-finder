@@ -1,0 +1,26 @@
+.logo {
+  position: relative;
+  left: 50%;
+  margin-top: 20px;
+}
+
+.logo_background {
+  background: url('../../images/pokemon-logo.png');
+  background-size: contain;
+  width: 500px;
+  height: 184px;
+  margin-left: -250px;
+
+  .logo_text {
+    font-family: 'pokemon-font', monospace;
+    position: absolute;
+    font-size: 25px;
+    margin-left: -135.5px;
+    top: 80%;
+  }
+
+}
+
+
+
+

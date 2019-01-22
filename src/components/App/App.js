@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './_App.scss';
-import MyText from "../MyText/MyText";
+import Logo from "../Logo/Logo";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <h1>My app</h1>
-        <MyText text="siemano"/>
+          <Logo/>
       </div>
     );
   }
