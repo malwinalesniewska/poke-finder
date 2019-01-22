@@ -1,0 +1,33 @@
+@import "../App/colors";
+
+.search_bar {
+  width: 100%;
+  max-width: 640px;
+  margin: 50px auto 0;
+
+  .search {
+    height: 35px;
+    opacity: 0.9;
+    border: 1px solid $border-color;
+
+    img {
+    }
+  }
+
+  .searchInput {
+    float: left;
+    width: calc(100% - 50px);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+  }
+
+  .searchButton {
+    width: 50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-family: 'pokemon-font', monospace;
+    background-color: $search-btn;
+  }
+}
+
