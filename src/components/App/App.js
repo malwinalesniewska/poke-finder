@@ -24,7 +24,7 @@ class App extends Component {
             .then(data => {
                 console.log(data);
                 this.setState({
-                    pokemons: data,
+                    pokemons: data.results,
                     shouldRender: true
                 })
         })
