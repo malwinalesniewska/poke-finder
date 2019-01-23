@@ -1,0 +1,70 @@
+@import "../App/colors";
+
+.single_pokemon_view_container {
+  //display: flex;
+  //justify-content: center;
+  transition: 1s;
+
+  .single_pokemon_view {
+    width: 280px;
+    background-color: rgba(white, 0.8);
+    box-shadow: 1px 1px 2px 2px $border-color;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'pokemon-font', monospace;
+    position: relative;
+    left: 50%;
+    margin: 50px 0 0 -140px;
+    transition: height 1s;
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .properties_list {
+      margin-top: -10px;
+
+      .pokemon_name {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .show_stats_btn {
+        background-color: $search-btn;
+        box-shadow: 1px 1px $border-color;
+        font-family: 'pokemon-font', monospace;
+        border-radius: 5px;
+        width: 200px;
+        height: 30px;
+        margin-top: 70px;
+        position: absolute;
+        left: 50%;
+        margin-left: -100px;
+      }
+    }
+
+    .stats_list {
+      transition: display 2s;
+      table {
+        margin: 0 auto;
+        font-size: 15px;
+        padding-top: 20px;
+
+        td {
+          padding-top: 2px;
+        }
+      }
+    }
+  }
+}
+
+.hide_stats_btn {
+  background-color: $search-btn;
+  box-shadow: 1px 1px $border-color;
+  font-family: 'pokemon-font', monospace;
+  border-radius: 5px;
+  width: 200px;
+  height: 30px;
+  margin-top: 5px;
+}
