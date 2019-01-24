@@ -50,7 +50,9 @@ class SinglePokemonView extends React.Component {
                     style={{
                         height: loadStats ? '400px' : '300px'
                     }}>
-                    <img src={pokemon.sprites.front_default} alt='pokemon_img'/>
+                    {pokemon.sprites.front_default !== null ? (<img src={pokemon.sprites.front_default} alt='pokemon_img'/>)
+                    : <div className='no_image'/>}
+
                     <div className='properties_list' >
                         <p className='pokemon_name'>{pokemon.name}</p>
                         <p>{pokemon.types.length > 1 ? 'Types: ' : 'Type: ' }

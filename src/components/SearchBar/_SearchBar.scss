@@ -2,8 +2,16 @@
 
 .search_bar {
   width: 100%;
-  max-width: 768px;
+  max-width: 800px;
   margin: 50px auto 0;
+
+  @media screen and (min-width: 460px) and (max-width: 768px)  {
+    max-width: 600px;
+  }
+
+  @media screen and (max-width: 459px){
+    max-width: 300px;
+  }
 
   .search {
     height: 35px;
@@ -15,18 +23,31 @@
     font-family: 'pokemon-font', monospace;
     font-size: 15px;
     float: left;
-    width: calc(100% - 50px);
+    width: calc(100% - 80px);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding-left: 5px;
   }
 
   .searchButton {
-    width: 50px;
+    width: 80px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     font-family: 'pokemon-font', monospace;
     background-color: $search-btn;
+    padding-top: 8px;
+    color: white;
+    font-weight: bold;
+
+    .button_img {
+      background: url("../../images/Pikachu_(Winking).png") center no-repeat;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+      float: right;
+      margin-top: -10px;
+      margin-right: 5px;
+    }
   }
 }
 

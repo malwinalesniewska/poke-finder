@@ -15,19 +15,41 @@
     user-select: none;
     cursor: pointer;
     transition: transform;
+    color: white;
+    font-weight: bold;
 
     &:hover {
       transform: scale(1.1)
     }
   }
+  button:disabled {
+    color: darkgrey;
+  }
 
   .previous_btn {
     right: 570px;
+
+    @media screen and (min-width: 460px) and (max-width: 768px)  {
+      left: -500px;
+    }
+
+    @media screen and (max-width: 459px){
+      left: -313px;
+    }
+
   }
 
   .next_btn {
     margin-bottom: 20px;
     left: 250px;
+
+    @media screen and (min-width: 460px) and (max-width: 768px)  {
+      left: 80px;
+    }
+
+    @media screen and (max-width: 459px){
+      left: -105px;
+    }
   }
 
   p {
@@ -35,5 +57,13 @@
     top: 160px;
     right: 150px;
     font-family: 'pokemon-font', monospace;
+
+    @media screen and (min-width: 460px) and (max-width: 768px)  {
+      right: 140px;
+    }
+
+    @media screen and (max-width: 459px){
+      right: 143px;
+    }
   }
 }

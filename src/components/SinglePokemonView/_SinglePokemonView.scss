@@ -17,9 +17,25 @@
     margin: 50px 0 0 -140px;
     transition: height 1s;
 
+    @media screen and (min-width: 460px) and (max-width: 768px) {
+      margin-top: 200px;
+      transform: scale(1.7);
+    }
+
     img {
       width: 120px;
       height: 120px;
+    }
+
+    .no_image {
+      width: 120px;
+      height: 120px;
+      background: url("../../images/pokeball_icon_no_image.png") center no-repeat;
+      background-size: contain;
+      margin-bottom: 10px;
+      position: relative;
+      left: 50%;
+      margin-left: -60px;
     }
 
     .properties_list {
@@ -45,7 +61,7 @@
     }
 
     .stats_list {
-      transition: display 2s;
+
       table {
         margin: 0 auto;
         font-size: 15px;
