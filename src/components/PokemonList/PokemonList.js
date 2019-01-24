@@ -1,6 +1,7 @@
 import React from 'react';
 import './_PokemonList.scss'
 import SinglePokemon from "../SinglePokemon/SinglePokemon";
+import PropTypes from "prop-types";
 
 const PokemonList = ({pokemons, children}) => (
         pokemons.length > 0 ? (
@@ -11,10 +12,18 @@ const PokemonList = ({pokemons, children}) => (
                 ))}
                 {children}
             </ul>
+
         ) : (
-            <div>Pokemons not found</div>
+            <div className='pkmns_not_found'>
+                <span>Pokemons not found</span>
+                <div className='mad_pikachu'/>
+            </div>
         )
 );
+
+PokemonList.propTypes = {
+    pokemons: PropTypes.array
+};
 
 
 export default PokemonList;

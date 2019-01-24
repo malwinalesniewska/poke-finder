@@ -1,0 +1,39 @@
+@import "../App/colors";
+
+.buttons {
+  position: relative;
+
+  .lower {
+    position: absolute;
+    top: 150px;
+    height: 30px;
+    width: 100px;
+    background-color: $search-btn;
+    box-shadow: 1px 1px $border-color;
+    font-family: 'pokemon-font', monospace;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+    transition: transform;
+
+    &:hover {
+      transform: scale(1.1)
+    }
+  }
+
+  .previous_btn {
+    right: 570px;
+  }
+
+  .next_btn {
+    margin-bottom: 20px;
+    left: 250px;
+  }
+
+  p {
+    position: absolute;
+    top: 160px;
+    right: 150px;
+    font-family: 'pokemon-font', monospace;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import './_SinglePokemon.scss';
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
 const SinglePokemon = ({pokemon}) => {
 
@@ -12,6 +13,10 @@ const SinglePokemon = ({pokemon}) => {
         </li>
     )
 
+};
+
+SinglePokemon.propTypes = {
+    pokemon: PropTypes.object
 };
 
 export default SinglePokemon;

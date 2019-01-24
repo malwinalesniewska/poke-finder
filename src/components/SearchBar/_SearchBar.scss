@@ -13,11 +13,12 @@
 
   .searchInput {
     font-family: 'pokemon-font', monospace;
-    font-size: 20px;
+    font-size: 15px;
     float: left;
     width: calc(100% - 50px);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    padding-left: 5px;
   }
 
   .searchButton {

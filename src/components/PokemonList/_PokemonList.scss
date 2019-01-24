@@ -5,3 +5,26 @@
   margin-top: 50px;
   transition: opacity 2s;
 }
+
+.pkmns_not_found {
+  font-family: 'pokemon-font', monospace;
+  position: absolute;
+  left: 50%;
+  margin-left: -162.5px;
+  text-align: center;
+  padding-top: 70px;
+  font-size: 30px;
+
+  .mad_pikachu {
+    background: url("../../images/crying_pikachu.gif") center no-repeat;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -100px;
+
+
+  }
+}
