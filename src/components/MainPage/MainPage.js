@@ -38,7 +38,6 @@ class MainPage extends React.Component {
                     prevPageUrl: data.previous,
                     currentPage: this.state.currentPage + 1
                 });
-                console.log(data.previous)
             })
     };
 

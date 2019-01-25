@@ -5,7 +5,7 @@
 
   .lower {
     position: absolute;
-    top: 150px;
+    top: 30px;
     height: 30px;
     width: 100px;
     background-color: $search-btn;
@@ -27,43 +27,43 @@
   }
 
   .previous_btn {
-    right: 570px;
+    left: 50px;
 
     @media screen and (min-width: 460px) and (max-width: 768px)  {
-      left: -500px;
+
     }
 
     @media screen and (max-width: 459px){
-      left: -313px;
+
     }
 
   }
 
   .next_btn {
     margin-bottom: 20px;
-    left: 250px;
+    right: 40px;
 
     @media screen and (min-width: 460px) and (max-width: 768px)  {
-      left: 80px;
+      right: 40px;
     }
 
     @media screen and (max-width: 459px){
-      left: -105px;
+
     }
   }
 
   p {
     position: absolute;
-    top: 160px;
-    right: 150px;
+    top: 40px;
+    right: 50%;
     font-family: 'pokemon-font', monospace;
 
     @media screen and (min-width: 460px) and (max-width: 768px)  {
-      right: 140px;
     }
 
     @media screen and (max-width: 459px){
-      right: 143px;
+      right: 0;
+      left: 152px;
     }
   }
 }

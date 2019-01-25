@@ -5,6 +5,7 @@ import Logo from "../Logo/Logo";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import MainPage from '../MainPage/MainPage';
 import SinglePokemonView from "../SinglePokemonView/SinglePokemonView";
+import PokemonComparison from '../PokemonComparison/PokemonComparison'
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
                     <Switch>
                         <Route path="/" exact component={MainPage}/>
                         <Route path="/pokemon/:pokemonId" component={SinglePokemonView}/>
+                        <Route path="/compare/:pokemonId1/:pokemonId2" component={PokemonComparison}/>
                     </Switch>
                 </BrowserRouter>
             </div>

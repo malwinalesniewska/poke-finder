@@ -1,3 +1,5 @@
+@import "../App/colors";
+
 .pokemons {
   display: flex;
   justify-content: center;
@@ -25,4 +27,17 @@
     margin-top: -20px;
     margin-left: -100px;
   }
+}
+
+.compare_button {
+  background-color: $search-btn;
+  box-shadow: 1px 1px $border-color;
+  font-family: 'pokemon-font', monospace;
+  border-radius: 5px;
+  width: 200px;
+  height: 30px;
+  position: relative;
+  top: 20px;
+  left: 50%;
+  margin-left: -100px;
 }
