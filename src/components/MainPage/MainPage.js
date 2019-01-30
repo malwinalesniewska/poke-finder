@@ -30,6 +30,7 @@ class MainPage extends React.Component {
                 }
             })
             .then(data => {
+                console.log('data.previous:', data.previous);
                 this.setState({
                     pokemons: data.results,
                     cachedPokemons: data.results,
@@ -38,7 +39,9 @@ class MainPage extends React.Component {
                     prevPageUrl: data.previous,
                     currentPage: this.state.currentPage + 1
                 });
-            })
+            });
+
+        console.log('this.state.prevPageUrl: ', this.state.prevPageUrl)
     };
 
     getPrevPage = () => {
