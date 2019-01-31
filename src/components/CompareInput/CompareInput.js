@@ -5,7 +5,7 @@ class CompareInput extends React.Component {
 
     changeHandler = () => {
         this.props.checkPokemon(this.props.pokemonId);
-        this.props.onChecked(this.props.isChecked)
+        this.props.onCheck(this.props.isChecked)
     };
 
 

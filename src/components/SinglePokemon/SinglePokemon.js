@@ -39,7 +39,7 @@ class SinglePokemon extends React.Component {
         return (
             <li className='singlePokemon' style={{textTransform: 'uppercase'}} onMouseEnter={this.enterHandler} onMouseLeave={this.leaveHandler}>
                 <Link to={`/pokemon/${pokemonId}`}>{pokemon.name}</Link>
-                {mouseEnter || isChecked ? <CompareInput pokemonId={pokemonId} checkPokemon={checkPokemon} onChecked={this.checkedHandler}/> : null}
+                {mouseEnter || isChecked ? <CompareInput pokemonId={pokemonId} checkPokemon={checkPokemon} onCheck={this.checkedHandler}/> : null}
 
             </li>
         )
