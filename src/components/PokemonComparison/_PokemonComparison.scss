@@ -2,11 +2,11 @@
 
 .pokemon_comparison {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   text-align: center;
   width: 600px;
-  height: 400px;
+  height: 450px;
   background-color: rgba(white, 0.8);
   box-shadow: 1px 1px 2px 2px $border-color;
   border-radius: 5px;
@@ -14,6 +14,13 @@
   margin-top: 50px;
   margin-bottom: 50px;
   font-family: 'pokemon-font', monospace;
+
+  @media screen and (min-width: 460px) and (max-width: 768px) {
+    flex-direction: column;
+    width: 600px;
+    height: 1000px;
+    align-self: flex-start;
+  }
 
   .first_pokemon,
   .second_pokemon {
@@ -27,6 +34,40 @@
 
   }
 
+  .stats_list {
+    display: flex;
+
+    @media screen and (min-width: 460px) and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stats_table {
+      padding: 10px;
+      margin-top: 5px;
+      text-align: left;
+
+    }
+
+    span {
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: 3px;
+
+    }
+
+    .table_one,
+    .table_two,
+    .stats_table {
+      @media screen and (min-width: 460px) and (max-width: 768px) {
+        align-self: flex-end;
+      }
+
+    }
+
+  }
 
 }
 
