@@ -58,6 +58,10 @@
       margin-top: 5px;
       text-align: left;
 
+      @media screen and (max-width: 460px) {
+        text-align: center;
+      }
+
     }
 
     span {

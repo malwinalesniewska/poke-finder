@@ -27,29 +27,12 @@
   }
 
   .previous_btn {
-    left: 50px;
-
-    @media screen and (min-width: 460px) and (max-width: 768px)  {
-
-    }
-
-    @media screen and (max-width: 459px){
-      left: 30px;
-    }
-
+    left: 5%;
   }
 
   .next_btn {
     margin-bottom: 20px;
-    right: 40px;
-
-    @media screen and (min-width: 460px) and (max-width: 768px)  {
-      right: 40px;
-    }
-
-    @media screen and (max-width: 459px){
-
-    }
+    right: 5%;
   }
 
   p {
@@ -58,12 +41,12 @@
     right: 50%;
     font-family: 'pokemon-font', monospace;
 
-    @media screen and (min-width: 460px) and (max-width: 768px)  {
+    @media screen and (min-width: 460px) and (max-width: 768px) {
+      right: 47%;
     }
 
     @media screen and (max-width: 459px){
-      right: 0;
-      left: 140px;
+      right: 45%;
     }
   }
 }
