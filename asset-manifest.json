@@ -1,0 +1,18 @@
+{
+  "main.css": "/poke-finder/static/css/main.de8730c6.chunk.css",
+  "main.js": "/poke-finder/static/js/main.148675a0.chunk.js",
+  "main.js.map": "/poke-finder/static/js/main.148675a0.chunk.js.map",
+  "static/js/1.40682a06.chunk.js": "/poke-finder/static/js/1.40682a06.chunk.js",
+  "static/js/1.40682a06.chunk.js.map": "/poke-finder/static/js/1.40682a06.chunk.js.map",
+  "runtime~main.js": "/poke-finder/static/js/runtime~main.e44ff0f4.js",
+  "runtime~main.js.map": "/poke-finder/static/js/runtime~main.e44ff0f4.js.map",
+  "static/media/_App.scss": "/poke-finder/static/media/pokeball-1594373_960_720edited.a6a61af2.png",
+  "static/media/_SearchBar.scss": "/poke-finder/static/media/Pikachu_(Winking).0721f61a.png",
+  "static/media/_PokemonList.scss": "/poke-finder/static/media/crying_pikachu.84c4e8c1.gif",
+  "static/media/_SinglePokemonView.scss": "/poke-finder/static/media/pokeball_icon_no_image.8a6a1496.png",
+  "static/media/_Logo.scss": "/poke-finder/static/media/pokemon-logo.76e143d1.png",
+  "static/css/main.de8730c6.chunk.css.map": "/poke-finder/static/css/main.de8730c6.chunk.css.map",
+  "index.html": "/poke-finder/index.html",
+  "precache-manifest.c61e9e8c6436e4d9affe6c37a269d17a.js": "/poke-finder/precache-manifest.c61e9e8c6436e4d9affe6c37a269d17a.js",
+  "service-worker.js": "/poke-finder/service-worker.js"
+}
