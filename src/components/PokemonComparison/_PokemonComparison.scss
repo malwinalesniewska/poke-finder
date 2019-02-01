@@ -1,8 +1,19 @@
 @import "../App/colors";
 
+.back_btn {
+  background-color: $search-btn;
+  font-family: 'pokemon-font', monospace;
+  border-radius: 5px;
+  width: 200px;
+  height: 30px;
+  position: relative;
+  left: 50%;
+  margin-left: -100px;
+  top: 30px;
+}
 .pokemon_comparison {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   text-align: center;
   width: 600px;
@@ -15,11 +26,10 @@
   margin-bottom: 50px;
   font-family: 'pokemon-font', monospace;
 
-  @media screen and (min-width: 460px) and (max-width: 768px) {
+  @media screen and (max-width: 460px) {
     flex-direction: column;
-    width: 600px;
+    width: 400px;
     height: 1000px;
-    align-self: flex-start;
   }
 
   .first_pokemon,
@@ -37,9 +47,10 @@
   .stats_list {
     display: flex;
 
-    @media screen and (min-width: 460px) and (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
+    @media screen and (max-width: 460px) {
+      flex-wrap: wrap;
+      justify-content: center;
+
     }
 
     .stats_table {
@@ -61,8 +72,8 @@
     .table_one,
     .table_two,
     .stats_table {
-      @media screen and (min-width: 460px) and (max-width: 768px) {
-        align-self: flex-end;
+      @media screen and (max-width: 460px){
+
       }
 
     }
