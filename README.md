@@ -1,6 +1,6 @@
 ## PokeFinder
 
-This is my first app in React, still in progress. It'll display a list of 949 pokemon with a possibility to find one by its name or type, and to compare chosen pokemons.
+This is my first app in React, which uses free public API. It displays a list of 949 GameBoy Pokemon with a possibility to find one by its name, and to compare two chosen pokemons. You can check it here https://malwinalesniewska.github.io/poke-finder
 
 ## Available Scripts
 
