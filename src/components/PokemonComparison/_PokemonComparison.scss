@@ -10,6 +10,9 @@
   left: 50%;
   margin-left: -100px;
   top: 30px;
+  border: 2px solid lighten($search-btn, 20);
+  color: white;
+  font-weight: bold;
 }
 .pokemon_comparison {
   display: flex;
@@ -21,9 +24,7 @@
   background-color: rgba(white, 0.8);
   box-shadow: 1px 1px 2px 2px $border-color;
   border-radius: 5px;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px auto;
   font-family: 'pokemon-font', monospace;
 
   @media screen and (max-width: 460px) {
@@ -50,7 +51,6 @@
     @media screen and (max-width: 460px) {
       flex-wrap: wrap;
       justify-content: center;
-
     }
 
     .stats_table {
@@ -61,7 +61,6 @@
       @media screen and (max-width: 460px) {
         text-align: center;
       }
-
     }
 
     span {
@@ -70,19 +69,14 @@
 
     td {
       padding: 3px;
-
     }
-
-    .table_one,
-    .table_two,
-    .stats_table {
-      @media screen and (max-width: 460px){
-
-      }
-
-    }
-
   }
+}
 
+.loadingScreen {
+  margin-top: 10%;
+  text-align: center;
+  font-family: 'pokemon-font', monospace;
+  font-size: 20px;
 }
 

@@ -46,7 +46,7 @@
 
       .show_stats_btn {
         background-color: $search-btn;
-        box-shadow: 1px 1px $border-color;
+        border: 2px solid lighten($search-btn, 20);
         font-family: 'pokemon-font', monospace;
         border-radius: 5px;
         width: 200px;
@@ -55,6 +55,8 @@
         position: absolute;
         left: 50%;
         margin-left: -100px;
+        color: white;
+        font-weight: bold;
       }
     }
 
@@ -75,11 +77,13 @@
 
 .hide_stats_btn {
   background-color: $search-btn;
-  box-shadow: 1px 1px $border-color;
+  border: 2px solid lighten($search-btn, 20);
   font-family: 'pokemon-font', monospace;
   border-radius: 5px;
   width: 200px;
   height: 30px;
   margin-top: 5px;
+  color: white;
+  font-weight: bold;
 }
 

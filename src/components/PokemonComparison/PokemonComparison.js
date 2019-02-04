@@ -9,8 +9,7 @@ class PokemonComparison extends React.Component {
             pokemon1: '',
             pokemon2: '',
             shouldRender1: false,
-            shouldRender2: false,
-            onMouseEnter: false
+            shouldRender2: false
         }
     }
 
@@ -51,7 +50,7 @@ class PokemonComparison extends React.Component {
     render() {
         const {pokemon1, pokemon2, shouldRender1, shouldRender2} = this.state;
         if (!shouldRender1 && !shouldRender2) {
-            return <div id='loadingScreen'>Loading...</div>;
+            return <div className='loadingScreen'>Loading...</div>;
         }
         if (shouldRender1 && shouldRender2) {
             return (
@@ -64,7 +63,7 @@ class PokemonComparison extends React.Component {
                             <h2 style={{textTransform: 'uppercase'}}>{pokemon1.name}</h2>
                             {pokemon1.sprites.front_default !== null ? (<img src={pokemon1.sprites.front_default} alt='pokemon1_img'/>)
                                 :  <div/>}
-                            <p className='poke_types'> {pokemon1.types.length > 1 ? 'Types: ' : 'Type: ' }
+                            <p> {pokemon1.types.length > 1 ? 'Types: ' : 'Type: ' }
                                 {pokemon1.types.map((elem, index) => {
                                     return <span className='pokemon_type' key={index} style={{textTransform: 'uppercase'}}>{elem.type.name}&nbsp;</span>
                                 })}
@@ -75,7 +74,7 @@ class PokemonComparison extends React.Component {
                             <h2 style={{textTransform: 'uppercase'}}>{pokemon2.name}</h2>
                             {pokemon2.sprites.front_default !== null ? (<img src={pokemon2.sprites.front_default} alt='pokemon1_img'/>)
                                 :  <div/>}
-                            <p className='poke_types'> {pokemon2.types.length > 1 ? 'Types: ' : 'Type: ' }
+                            <p> {pokemon2.types.length > 1 ? 'Types: ' : 'Type: ' }
                                 {pokemon2.types.map((elem, index) => {
                                     return <span className='pokemon_type' key={index} style={{textTransform: 'uppercase'}}>{elem.type.name}&nbsp;</span>
                                 })}
@@ -91,12 +90,12 @@ class PokemonComparison extends React.Component {
                                 </thead>
                                 <tbody>
                                     {pokemon1.stats.map((poke1, index) =>
-                                        <tr>
-                                            <td key={index}>{poke1.stat.name}</td>
+                                        <tr key={index}>
+                                            <td>{poke1.stat.name}</td>
                                         </tr>)}
                                 </tbody>
                             </table>
-                            <table className='table_one'>
+                            <table>
                                 <thead>
                                 <tr>
                                     <td>Base<br/><span>{pokemon1.name}</span></td>
@@ -112,7 +111,7 @@ class PokemonComparison extends React.Component {
                                 )}
                                 </tbody>
                             </table>
-                            <table className='table_two'>
+                            <table>
                                 <thead>
                                 <tr>
                                     <td>Base<br/><span>{pokemon2.name}</span></td>
@@ -120,8 +119,8 @@ class PokemonComparison extends React.Component {
                                 </tr>
                                 </thead>
                                 {pokemon2.stats.map((poke2, index) =>
-                                    <tbody>
-                                    <tr key={index}>
+                                    <tbody key={index}>
+                                    <tr>
                                         <td>{poke2.base_stat}</td>
                                         <td>{poke2.effort}</td>
                                     </tr>
@@ -133,7 +132,7 @@ class PokemonComparison extends React.Component {
                 </Fragment>
             )
         } else {
-           return <div>Loading...</div>
+           return <div className='loadingScreen'>Loading...</div>
         }
     }
 

@@ -89,11 +89,11 @@ class MainPage extends React.Component {
 
                 <PokemonList pokemons={pokemons}>
                     <div className='buttons'>
-                        <button className='previous_btn lower'
+                        <button className='previous_btn button'
                                 onClick={this.getPrevPage}
                                 disabled={currentPage === 1}>Previous</button>
                         <p>-{currentPage}-</p>
-                        <button className='next_btn lower'
+                        <button className='next_btn button'
                                 onClick={this.getNextPage}
                                 disabled={currentPage === 13}>Next</button>
                     </div>
