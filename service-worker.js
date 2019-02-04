@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/poke-finder/precache-manifest.e63ca79bb4243dde40b0d13a4e6ac8dc.js"
+  "/poke-finder/precache-manifest.5cd7b4eafdae4eabd2f798b875aa5a45.js"
 );
 
 workbox.clientsClaim();
