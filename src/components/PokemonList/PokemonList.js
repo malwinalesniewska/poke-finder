@@ -33,7 +33,6 @@ class PokemonList extends React.Component {
                     {checkedPokemons.length === 2 ? (<Link to={`/compare/${checkedPokemons[0]}/${checkedPokemons[1]}`}>
                         <button className='compare_button' onClick={this.compareButton}>COMPARE</button>
                     </Link>) : null}
-
                     <ul className='pokemons'>
                         {pokemons.map((pokemon, index) => (
                             <SinglePokemon key={index} pokemon={pokemon} index={index} checkPokemon={this.compareButton}/>
@@ -41,7 +40,6 @@ class PokemonList extends React.Component {
                     </ul>
                     {children}
                 </Fragment>
-
             ) : (
                 <div className='pkmns_not_found'>
                     <span>Pokemons not found</span>
@@ -56,6 +54,5 @@ PokemonList.propTypes = {
     pokemons: PropTypes.array,
     checkedPokemons: PropTypes.array
 };
-
 
 export default PokemonList;

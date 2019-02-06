@@ -10,7 +10,6 @@ import PokemonComparison from '../PokemonComparison/PokemonComparison'
 class App extends Component {
 
     render() {
-
         return (
             <div>
                 <Logo/>

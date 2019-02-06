@@ -8,8 +8,8 @@ class PokemonComparison extends React.Component {
         this.state = {
             pokemon1: '',
             pokemon2: '',
-            shouldRender1: false,
-            shouldRender2: false
+            isLoading1: true,
+            isLoading2: true
         }
     }
 
@@ -27,7 +27,7 @@ class PokemonComparison extends React.Component {
                 }).then(data1 => {
                 this.setState({
                     pokemon1: data1,
-                    shouldRender1: true
+                    isLoading: false
                 });
         });
     };
@@ -41,18 +41,18 @@ class PokemonComparison extends React.Component {
                 }).then(data2 => {
                 this.setState({
                     pokemon2: data2,
-                    shouldRender2: true
+                    isLoading: false
                 });
         });
     };
 
 
     render() {
-        const {pokemon1, pokemon2, shouldRender1, shouldRender2} = this.state;
-        if (!shouldRender1 && !shouldRender2) {
+        const {pokemon1, pokemon2, isLoading1, isLoading2} = this.state;
+        if (isLoading1 && isLoading2) {
             return <div className='loadingScreen'>Loading...</div>;
         }
-        if (shouldRender1 && shouldRender2) {
+        if (!isLoading1 && !isLoading2) {
             return (
                 <Fragment>
                     <Link to={'/'}>
@@ -61,22 +61,32 @@ class PokemonComparison extends React.Component {
                     <div className='pokemon_comparison'>
                         <div className='first_pokemon'>
                             <h2 style={{textTransform: 'uppercase'}}>{pokemon1.name}</h2>
-                            {pokemon1.sprites.front_default !== null ? (<img src={pokemon1.sprites.front_default} alt='pokemon1_img'/>)
+                            {pokemon1.sprites.front_default !== null ?
+                                (<img src={pokemon1.sprites.front_default} alt='pokemon1_img'/>)
                                 :  <div/>}
-                            <p> {pokemon1.types.length > 1 ? 'Types: ' : 'Type: ' }
+                            <p> {pokemon1.types.length > 1 ? 'Types: ' : 'Type: '}
                                 {pokemon1.types.map((elem, index) => {
-                                    return <span className='pokemon_type' key={index} style={{textTransform: 'uppercase'}}>{elem.type.name}&nbsp;</span>
+                                    return <span
+                                        className='pokemon_type'
+                                        key={index}
+                                        style={{textTransform: 'uppercase'}}
+                                    >{elem.type.name}&nbsp;</span>
                                 })}
                             </p>
                             <p>Base experience: {pokemon1.base_experience}</p>
                         </div>
                         <div className='second_pokemon'>
                             <h2 style={{textTransform: 'uppercase'}}>{pokemon2.name}</h2>
-                            {pokemon2.sprites.front_default !== null ? (<img src={pokemon2.sprites.front_default} alt='pokemon1_img'/>)
+                            {pokemon2.sprites.front_default !== null ?
+                                (<img src={pokemon2.sprites.front_default} alt='pokemon1_img'/>)
                                 :  <div/>}
-                            <p> {pokemon2.types.length > 1 ? 'Types: ' : 'Type: ' }
+                            <p> {pokemon2.types.length > 1 ? 'Types: ' : 'Type: '}
                                 {pokemon2.types.map((elem, index) => {
-                                    return <span className='pokemon_type' key={index} style={{textTransform: 'uppercase'}}>{elem.type.name}&nbsp;</span>
+                                    return <span
+                                        className='pokemon_type'
+                                        key={index}
+                                        style={{textTransform: 'uppercase'}}
+                                    >{elem.type.name}&nbsp;</span>
                                 })}
                             </p>
                             <p>Base experience: {pokemon2.base_experience}</p>

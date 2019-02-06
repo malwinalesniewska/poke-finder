@@ -7,7 +7,6 @@ const Logo = () => (
                 <p className='logo logo_text'>Gonna find'em all!</p>
             </div>
     </Fragment>
-
 );
 
 export default Logo;

@@ -12,9 +12,8 @@ class SinglePokemonView extends React.Component {
     }
 
     componentDidMount() {
-
-        fetch(`https://pokeapi.co/api/v2/pokemon/${this.props.match.params.pokemonId}`).then(
-            response => {
+        fetch(`https://pokeapi.co/api/v2/pokemon/${this.props.match.params.pokemonId}`)
+            .then(response => {
                 if (response.ok) {
                     return response.json();
                 }
@@ -50,14 +49,17 @@ class SinglePokemonView extends React.Component {
                     style={{
                         height: loadStats ? '400px' : '300px'
                     }}>
-                    {pokemon.sprites.front_default !== null ? (<img src={pokemon.sprites.front_default} alt='pokemon_img'/>)
+                    {pokemon.sprites.front_default !== null ?
+                        (<img src={pokemon.sprites.front_default} alt='pokemon_img'/>)
                     : <div className='no_image'/>}
 
                     <div className='properties_list' >
                         <p className='pokemon_name'>{pokemon.name}</p>
                         <p>{pokemon.types.length > 1 ? 'Types: ' : 'Type: ' }
                         {pokemon.types.map((elem, index) => {
-                            return <span key={index} style={{textTransform: 'uppercase'}}>{elem.type.name}&nbsp;</span>
+                            return <span key={index}
+                                         style={{textTransform: 'uppercase'}}
+                            >{elem.type.name}&nbsp;</span>
                         })} </p>
                         <p>Base experience: {pokemon.base_experience}</p>
                         <button className='show_stats_btn' onClick={this.showStats}

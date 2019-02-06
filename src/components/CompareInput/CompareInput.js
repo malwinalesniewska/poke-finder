@@ -8,7 +8,6 @@ class CompareInput extends React.Component {
         this.props.onCheck(this.props.isChecked)
     };
 
-
     render() {
         return (
             <Fragment>
