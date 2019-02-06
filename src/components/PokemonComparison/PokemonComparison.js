@@ -27,7 +27,7 @@ class PokemonComparison extends React.Component {
                 }).then(data1 => {
                 this.setState({
                     pokemon1: data1,
-                    isLoading: false
+                    isLoading1: false
                 });
         });
     };
@@ -41,7 +41,7 @@ class PokemonComparison extends React.Component {
                 }).then(data2 => {
                 this.setState({
                     pokemon2: data2,
-                    isLoading: false
+                    isLoading2: false
                 });
         });
     };
@@ -66,10 +66,8 @@ class PokemonComparison extends React.Component {
                                 :  <div/>}
                             <p> {pokemon1.types.length > 1 ? 'Types: ' : 'Type: '}
                                 {pokemon1.types.map((elem, index) => {
-                                    return <span
-                                        className='pokemon_type'
-                                        key={index}
-                                        style={{textTransform: 'uppercase'}}
+                                    return <span key={index}
+                                                 style={{textTransform: 'uppercase'}}
                                     >{elem.type.name}&nbsp;</span>
                                 })}
                             </p>
@@ -82,10 +80,8 @@ class PokemonComparison extends React.Component {
                                 :  <div/>}
                             <p> {pokemon2.types.length > 1 ? 'Types: ' : 'Type: '}
                                 {pokemon2.types.map((elem, index) => {
-                                    return <span
-                                        className='pokemon_type'
-                                        key={index}
-                                        style={{textTransform: 'uppercase'}}
+                                    return <span key={index}
+                                                 style={{textTransform: 'uppercase'}}
                                     >{elem.type.name}&nbsp;</span>
                                 })}
                             </p>
