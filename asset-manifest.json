@@ -1,7 +1,7 @@
 {
   "main.css": "/poke-finder/static/css/main.096ddef2.chunk.css",
-  "main.js": "/poke-finder/static/js/main.ab7bb05a.chunk.js",
-  "main.js.map": "/poke-finder/static/js/main.ab7bb05a.chunk.js.map",
+  "main.js": "/poke-finder/static/js/main.b0911310.chunk.js",
+  "main.js.map": "/poke-finder/static/js/main.b0911310.chunk.js.map",
   "static/js/1.2645d420.chunk.js": "/poke-finder/static/js/1.2645d420.chunk.js",
   "static/js/1.2645d420.chunk.js.map": "/poke-finder/static/js/1.2645d420.chunk.js.map",
   "runtime~main.js": "/poke-finder/static/js/runtime~main.e44ff0f4.js",
@@ -13,6 +13,6 @@
   "static/media/_Logo.scss": "/poke-finder/static/media/pokemon-logo.76e143d1.png",
   "static/css/main.096ddef2.chunk.css.map": "/poke-finder/static/css/main.096ddef2.chunk.css.map",
   "index.html": "/poke-finder/index.html",
-  "precache-manifest.72c21643a9d926c82d16dbd52c69f4a0.js": "/poke-finder/precache-manifest.72c21643a9d926c82d16dbd52c69f4a0.js",
+  "precache-manifest.87b64fda3b8ff51ed175ab83002e69e2.js": "/poke-finder/precache-manifest.87b64fda3b8ff51ed175ab83002e69e2.js",
   "service-worker.js": "/poke-finder/service-worker.js"
 }

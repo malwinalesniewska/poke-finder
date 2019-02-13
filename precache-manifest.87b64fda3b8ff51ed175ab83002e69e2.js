@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/poke-finder/static/js/runtime~main.e44ff0f4.js"
   },
   {
-    "revision": "ab7bb05a52245a95b903",
-    "url": "/poke-finder/static/js/main.ab7bb05a.chunk.js"
+    "revision": "b091131019ad2dd8e9e8",
+    "url": "/poke-finder/static/js/main.b0911310.chunk.js"
   },
   {
     "revision": "2645d4209cfcc42f53a4",
     "url": "/poke-finder/static/js/1.2645d420.chunk.js"
   },
   {
-    "revision": "ab7bb05a52245a95b903",
+    "revision": "b091131019ad2dd8e9e8",
     "url": "/poke-finder/static/css/main.096ddef2.chunk.css"
   },
   {
-    "revision": "b439938774d7fbc737f16b5a0d966059",
+    "revision": "a5884cbe3fb85223d8229dc66a651050",
     "url": "/poke-finder/index.html"
   }
 ];
