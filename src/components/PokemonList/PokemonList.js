@@ -30,19 +30,33 @@ class PokemonList extends React.Component {
         return (
             pokemons.length > 0 ? (
                 <Fragment>
-                    {checkedPokemons.length === 2 ? (<Link to={`/compare/${checkedPokemons[0]}/${checkedPokemons[1]}`}>
-                        <button className='compare_button' onClick={this.compareButton}>COMPARE</button>
+                    {checkedPokemons.length === 2 ?
+                        (<Link to={`/compare/${checkedPokemons[0]}/${checkedPokemons[1]}`}>
+                        <button
+                            className='compare_button'
+                            onClick={this.compareButton}
+                        >
+                            COMPARE
+                        </button>
                     </Link>) : null}
                     <ul className='pokemons'>
                         {pokemons.map((pokemon, index) => (
-                            <SinglePokemon key={index} pokemon={pokemon} index={index} checkPokemon={this.compareButton}/>
+                            <SinglePokemon
+                                key={index}
+                                pokemon={pokemon}
+                                index={index}
+                                checkPokemon={this.compareButton}
+                                checkedPokemons={checkedPokemons}
+                            />
                         ))}
                     </ul>
                     {children}
                 </Fragment>
             ) : (
                 <div className='pkmns_not_found'>
-                    <span>Pokemons not found</span>
+                    <span>
+                        Pokemons not found
+                    </span>
                     <div className='mad_pikachu'/>
                 </div>
             )

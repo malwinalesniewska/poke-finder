@@ -74,15 +74,23 @@ class MainPage extends React.Component {
                 <SearchBar onSearch={this.filterPokemons}/>
                 <PokemonList pokemons={pokemons}>
                     <div className='buttons'>
-                        <button className='previous_btn button'
-                                onClick={() => this.getPokemons(currentUrl.previous,-1)}
-                                disabled={currentPage === 1}
-                                >Previous</button>
-                        <p>-{currentPage}-</p>
-                        <button className='next_btn button'
-                                onClick={() => this.getPokemons(currentUrl.next,+1)}
-                                disabled={currentPage === 13}
-                                >Next</button>
+                        <button
+                            className='previous_btn button'
+                            onClick={() => this.getPokemons(currentUrl.previous,-1)}
+                            disabled={currentPage === 1}
+                        >
+                                Previous
+                        </button>
+                        <p>
+                            -{currentPage}-
+                        </p>
+                        <button
+                            className='next_btn button'
+                            onClick={() => this.getPokemons(currentUrl.next,+1)}
+                            disabled={currentPage === 13}
+                        >
+                            Next
+                        </button>
                     </div>
                 </PokemonList>
             </Fragment>

@@ -15,9 +15,18 @@ class App extends Component {
                 <Logo/>
                 <HashRouter>
                     <Switch>
-                        <Route path="/" exact component={MainPage}/>
-                        <Route path="/pokemon/:pokemonId" component={SinglePokemonView}/>
-                        <Route path="/compare/:pokemonId1/:pokemonId2" component={PokemonComparison}/>
+                        <Route
+                            path="/"
+                            exact component={MainPage}
+                        />
+                        <Route
+                            path="/pokemon/:pokemonId"
+                            component={SinglePokemonView}
+                        />
+                        <Route
+                            path="/compare/:pokemonId1/:pokemonId2"
+                            component={PokemonComparison}
+                        />
                     </Switch>
                 </HashRouter>
             </div>

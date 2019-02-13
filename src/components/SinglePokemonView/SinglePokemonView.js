@@ -54,18 +54,34 @@ class SinglePokemonView extends React.Component {
                     : <div className='no_image'/>}
 
                     <div className='properties_list' >
-                        <p className='pokemon_name'>{pokemon.name}</p>
-                        <p>{pokemon.types.length > 1 ? 'Types: ' : 'Type: ' }
-                        {pokemon.types.map((elem, index) => {
-                            return <span key={index}
-                                         style={{textTransform: 'uppercase'}}
-                            >{elem.type.name}&nbsp;</span>
-                        })} </p>
-                        <p>Base experience: {pokemon.base_experience}</p>
-                        <button className='show_stats_btn' onClick={this.showStats}
-                        style={{
+                        <p className='pokemon_name'>
+                            {pokemon.name}
+                        </p>
+                        <p>
+                            {pokemon.types.length > 1 ? 'Types: ' : 'Type: ' }
+                            {pokemon.types.map((elem, index) => {
+                            return (
+                                <span
+                                    key={index}
+                                    style={{textTransform: 'uppercase'}}
+                                >
+                                    {elem.type.name}&nbsp;
+                                </span>
+                            )
+                            })}
+                        </p>
+                        <p>
+                            Base experience: {pokemon.base_experience}
+                        </p>
+                        <button
+                            className='show_stats_btn'
+                            onClick={this.showStats}
+                            style={{
                             display: loadStats ? 'none' : 'block'
-                        }}>Show stats</button>
+                            }}
+                        >
+                            Show stats
+                        </button>
                     </div>
                     <div className='stats_list'>
                         {(loadStats) ? (
@@ -90,8 +106,14 @@ class SinglePokemonView extends React.Component {
                         ) : null
                         }
                     </div>
-                    {(loadStats ? <button className='hide_stats_btn' onClick={this.hideStats}>HIDE</button> : null)}
-
+                    {(loadStats ?
+                        <button
+                            className='hide_stats_btn'
+                            onClick={this.hideStats}
+                        >
+                            HIDE
+                        </button>
+                    : null)}
                 </div>
             </div>
         )

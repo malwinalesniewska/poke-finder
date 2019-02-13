@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import './_CompareInput.scss';
 
 class CompareInput extends React.Component {
@@ -10,12 +10,14 @@ class CompareInput extends React.Component {
 
     render() {
         return (
-            <Fragment>
-                <label>
-                    <input type='checkbox' value='compare' onChange={this.changeHandler}/>
-                    compare
-                </label>
-            </Fragment>
+            <label>
+                <input
+                    type='checkbox'
+                    value='compare'
+                    onChange={this.changeHandler}
+                />
+                compare
+            </label>
         )
     }
 }

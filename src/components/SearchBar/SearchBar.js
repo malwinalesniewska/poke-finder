@@ -49,7 +49,11 @@ class SearchBar extends React.Component {
                 <button
                     className='search searchButton'
                     type='submit'
-                    onClick={this.searchPokemon}>GO!<div className='button_img'/></button>
+                    onClick={this.searchPokemon}
+                >
+                    GO!
+                    <div className='button_img'/>
+                </button>
             </div>
         )
     }

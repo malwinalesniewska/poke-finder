@@ -27,25 +27,32 @@ class SinglePokemon extends React.Component {
 
     checkedHandler = () => {
         this.setState({
-            isChecked: true
+            isChecked: !this.state.isChecked
         })
     };
 
     render() {
-        const {pokemon, checkPokemon} = this.props;
+        const {pokemon, checkPokemon, checkedPokemons} = this.props;
         const {mouseEnter, isChecked} = this.state;
         const splitedUrl = pokemon.url.split("/");
         const pokemonId = splitedUrl[splitedUrl.length - 2];
         return (
-            <li className='singlePokemon'
+            <li
+                className='singlePokemon'
                 style={{textTransform: 'uppercase'}}
                 onMouseEnter={this.enterHandler}
-                onMouseLeave={this.leaveHandler}>
-                <Link to={`/pokemon/${pokemonId}`}>{pokemon.name}</Link>
+                onMouseLeave={this.leaveHandler}
+            >
+                <Link to={`/pokemon/${pokemonId}`}>
+                    {pokemon.name}
+                </Link>
                 {mouseEnter || isChecked ?
-                    <CompareInput pokemonId={pokemonId}
-                                  checkPokemon={checkPokemon}
-                                  onCheck={this.checkedHandler}/>
+                    <CompareInput
+                        pokemonId={pokemonId}
+                        checkPokemon={checkPokemon}
+                        onCheck={this.checkedHandler}
+                        checkedPokemons={checkedPokemons}
+                    />
                 : null}
             </li>
         )
